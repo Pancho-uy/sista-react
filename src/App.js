@@ -1,9 +1,8 @@
-import logo from '../img/logo_menu.svg';
-import NavBar from './components/NavBar';'./components/NavBar';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
-<a></a>
+  <NavBar></NavBar>
   );
 }
 
