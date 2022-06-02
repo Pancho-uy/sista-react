@@ -1,0 +1,178 @@
+@charset "UTF-8";
+/* Importo de los partials el proyecto */
+/* El Resto se resolvió con BootStrap   */
+/* --Set de FONTS usadas en el proyecto -- */
+/* --Para TITULOS-- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+/* --Para SUB-TITULOS y el MENÚ-- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@900&display=swap");
+/* -- Para PARRAFOS -- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+/* --Fin de importacion de FONTS -- */
+/* ESTILOS PROPIOS */
+.fondoMio {
+  background: linear-gradient(to right, #000046, #1cb5e0); }
+
+.LinkBlanco {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; }
+
+.LinkNegro {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #000;
+  text-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff; }
+
+.parrafos {
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: medium;
+  padding: 0.5%; }
+
+.titulos {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  padding: 0.5%; }
+
+/* Animacion */
+.seccionAnima {
+  animation-name: seccion;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-delay: 0s; }
+
+@keyframes seccion {
+  from {
+    transform: translateX(-15%);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
+.linkRs-twitter {
+  color: yellow;
+  text-decoration: none;
+  font-size: 1.25rem; }
+
+.linkRs-whatsapp {
+  color: green;
+  text-decoration: none;
+  font-size: 1.25rem; }
+
+.linkRs-instagram {
+  color: red;
+  text-decoration: none;
+  font-size: 1.25rem; }
+
+/* ACORDEON PARA FAQ */
+/* Esta parte se implemento con @mixin y @include */
+/****************************************************************************************/
+.contenedorAcordeon {
+  grid-area: acordion; }
+
+.acordeon {
+  margin: 0 0 1% 2%;
+  background: linear-gradient(to right, #000046, #1cb5e0);
+  max-width: 95%;
+  box-shadow: 1 1 1 10 #272323;
+  border-radius: 0px;
+  font-family: 'Roboto Mono', monospace;
+  overflow: hidden; }
+
+.armo_etiqueta, .acordeon_etiqueta {
+  padding: 1% 1%;
+  color: white;
+  font-weight: 250;
+  transition: background 0.1s;
+  display: block; }
+  .armo_etiqueta:hover, .acordeon_etiqueta:hover {
+    background: #2a2255;
+    color: white; }
+  .armo_etiqueta::after, .acordeon_etiqueta::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 12px;
+    height: 6px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+    background-size: contain;
+    transition-delay: 0.5s; }
+
+/* EXTEND PARA EL DESAFIO */
+.acordeon_etiqueta {
+  cursor: pointer;
+  position: relative;
+  transition: background 0.1s; }
+
+/****************************************************************************************/
+.acordeon-contenido {
+  background: linear-gradient(to right, #000046, #1cb5e0);
+  color: white;
+  margin-left: 2%;
+  display: none; }
+
+.acordeon_opcion {
+  display: none; }
+  .acordeon_opcion:checked ~ .acordeon-contenido {
+    display: block; }
+  .acordeon_opcion:checked ~ .acordeon_etiqueta::after {
+    transform: translateY(-50%) rotate(0.5turn); }
+
+.mapa-google {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+  .mapa-google iframe {
+    left: 0;
+    top: 0;
+    height: 80%;
+    width: 80%;
+    position: absolute; }
+
+/* Sin Scroll para el index */
+.sinScroll {
+  overflow: hidden; }
+
+/*                                     */
+/* boton derecha */
+.carrito
+{
+  float:right;
+}
+
+/*********************/
+.img-subir
+{
+  display: inline;
+  float:right;
+  padding:3%;
+  margin:0 0 5% 22%;
+}
+
+.img-modoImp
+{
+  display: inline;
+  float:right;
+  padding:3%;
+  margin:0 0 0 22%;
+}
+
+.nomostrar
+{ display: none;}
+
+
+.tomoPDF{
+  display: inline-block;
+  width: 33%;
+}
+
+.aLaDerecha
+{
+  display:block;
+  justify-content: right;
+}
