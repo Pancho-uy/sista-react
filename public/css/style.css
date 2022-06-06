@@ -10,6 +10,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 /* --Fin de importacion de FONTS -- */
 /* ESTILOS PROPIOS */
+
+.bajoTitulo
+{
+  margin-top: 6%;
+}
+
 .fondoMio {
   background: linear-gradient(to right, #000046, #1cb5e0); }
 

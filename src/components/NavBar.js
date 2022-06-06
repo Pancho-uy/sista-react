@@ -1,6 +1,7 @@
 // Menú principal
 import logo from "../logo_menu.png";
-import carrito from "../carrito.png";
+import ElCarrito from "./Carrito.jsx";
+import MenuItem from "./MenuItem";
 
 export default function NavBar() {
   return (
@@ -13,30 +14,18 @@ export default function NavBar() {
           <section class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">
+                <a class="nav-link active" aria-current="page" href="#">
                   <img src={logo} alt="logo"/><strong>SISTA</strong></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Categorias</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Ofertas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">F.A.Q.</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-              </li>              
+              <MenuItem titulo="Artículos" destino ="/#"/>
+              <MenuItem titulo="Ofertas" destino ="/#"/>
+              <MenuItem titulo="F.A.Q." destino ="/#"/>
+              <MenuItem titulo="Contacto" destino ="/#"/>
+              <MenuItem titulo="Login" destino ="/#"/>
             </ul>
           </section>
           <section>
-            <a class="nav-link" href="../secciones/carrito.html">
-              <img class="float-end" src={carrito} alt="carrito" width="32" height="32"/>
-            </a>
+           <ElCarrito/>
         </section>
         </section>
       </nav>
