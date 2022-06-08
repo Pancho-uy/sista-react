@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from './components/NavBar';
 import Saludo from './components/ElSaludo';
+import BotonCompra from './components/ItemCount';
 
-function App() {
+export default function App() {
   return (
-    <>
-  <NavBar/>
-  <Saludo/>
+  <>
+    <NavBar/>
+    <Saludo/>
+    <BotonCompra stock={10} inicio={1}/>
   </>
   );
 }
 
-export default App;

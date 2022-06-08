@@ -1,9 +1,12 @@
 import carrito from "../carrito.png"
 
-export default function ElCarrito() {
+export default function ElCarrito(cantidad) {
   return (
-    <a className="nav-link" href="/#">
-        <img className="float-end" src={carrito} alt="carrito" width="32" height="32"/>
-    </a>
+    <>
+        <a className="nav-link" href="/#">
+            <img className="float-end" src={carrito} alt="carrito" width="32" height="32"/>
+        </a>
+        <span>cantidad</span>
+    </>
   )
 }
