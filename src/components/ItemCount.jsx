@@ -2,8 +2,10 @@ import { useState } from "react"
 
 function BotonCompra({stock,inicio,items}) {
 
+  // Inicializo la cantidad que se muestra en pantalla en 0 (inicio viene con 1)
   const [cantidad, setCount] = useState(inicio-1);
-  /* cantidad=inicio; */
+
+  // Stock viene con 10
 
   function agrego(){
     if (cantidad>=stock) {
