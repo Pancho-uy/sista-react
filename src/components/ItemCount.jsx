@@ -1,5 +1,4 @@
 import { useState } from "react"
-import ElCarrito from "./Carrito";
 
 function BotonCompra({stock,inicio,items}) {
 
