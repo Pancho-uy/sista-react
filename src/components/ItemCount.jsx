@@ -3,25 +3,25 @@ import { useState } from "react"
 import ElCarrito from "./Carrito";
 
 function BotonCompra({stock,inicio}) {
-  
-  let [cantidad, setCount] = useState(inicio);
-  
+
+  const [cantidad, setCount] = useState(inicio);
   /* cantidad=inicio; */
 
   function agrego(){
     setCount(cantidad + 1);
     if (cantidad>=stock) {alert("NO HAY MAS STOCK");
-    setCount(cantidad=stock);}
+    setCount(cantidad=stock);
   }
-  
+  }
+
   function saco(){
     setCount(cantidad - 1)
     if (cantidad<=inicio) {alert("NO SE PUEDE SACAR MAS");
     setCount(cantidad=inicio);}
   }
 
-  return (  
-    <section className="container"> 
+  return (
+    <section className="container">
     <div>
       <br/>
       <br/>
@@ -29,7 +29,6 @@ function BotonCompra({stock,inicio}) {
         <button className="btn btn-outline-primary" onClick={saco}> - </button>
         <span><strong>    {cantidad}    </strong></span>
         <button className="btn btn-outline-primary" onClick={agrego}> + </button>
-
     </div>
     </section>
   )
