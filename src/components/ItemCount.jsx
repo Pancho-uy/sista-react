@@ -8,16 +8,18 @@ function BotonCompra({stock,inicio}) {
   /* cantidad=inicio; */
 
   function agrego(){
-    setCount(cantidad + 1);
-    if (cantidad>=stock) {alert("NO HAY MAS STOCK");
-    setCount(cantidad=stock);
-  }
+    
+    if (cantidad>=stock) {
+      alert("NO HAY MAS STOCK");
+      setCount(cantidad=stock);}
+    else {setCount(cantidad + 1)};
   }
 
   function saco(){
-    setCount(cantidad - 1)
-    if (cantidad<=inicio) {alert("NO SE PUEDE SACAR MAS");
-    setCount(cantidad=inicio);}
+    if (cantidad<=inicio) {
+      alert("NO SE PUEDE SACAR MAS");
+      setCount(cantidad=inicio);}
+    else {setCount(cantidad - 1)}
   }
 
   return (
