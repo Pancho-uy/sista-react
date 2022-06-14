@@ -1,33 +1,35 @@
+import { Alert } from "bootstrap";
 import { useState } from "react"
+import ElCarrito from "./Carrito";
 
-function BotonCompra({stock,inicio,items}) {
-
-  // Inicializo la cantidad que se muestra en pantalla en 0 (inicio viene con 1)
-  const [cantidad, setCount] = useState(inicio-1);
-
-  // Stock viene con 10
+function BotonCompra({stock,inicio}) {
+  
+  let [cantidad, setCount] = useState(inicio);
+  
+  /* cantidad=inicio; */
 
   function agrego(){
-    if (cantidad>=stock) {
-      alert("NO HAY MAS STOCK");}
-    else {setCount(cantidad + 1)};
+    setCount(cantidad + 1);
+    if (cantidad>=stock) {alert("NO HAY MAS STOCK");
+    setCount(cantidad=stock);}
   }
-
+  
   function saco(){
-    if (cantidad<=inicio-1) {
-      alert("NO SE PUEDE SACAR MAS");}
-    else {setCount(cantidad - 1)}
+    setCount(cantidad - 1)
+    if (cantidad<=inicio) {alert("NO SE PUEDE SACAR MAS");
+    setCount(cantidad=inicio);}
   }
 
-  return (
-    <section className="container">
+  return (  
+    <section className="container"> 
     <div>
-        <br/>
-        <br/>
-        <br/>
+      <br/>
+      <br/>
+      <br/>
         <button className="btn btn-outline-primary" onClick={saco}> - </button>
         <span><strong>    {cantidad}    </strong></span>
         <button className="btn btn-outline-primary" onClick={agrego}> + </button>
+
     </div>
     </section>
   )

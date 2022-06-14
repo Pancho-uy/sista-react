@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Mikrotik 951",
+        "price": 110,
+        "stock": 8,
+        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/v1654899168/sista/MK951_jxwx2v.jpg",
+        "category": "Routers c/WIFI",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus."
+    },
+    {
+        "name": "Mikrotik 750",
+        "price": 85,
+        "stock": 10,
+        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/v1654899168/sista/MK750_hkjdt4.jpg",
+        "category": "Routers s/WIFI",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus."
+    },
+    {
+        "name": "UniFi AP",
+        "price": 180,
+        "stock": 5,
+        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/v1655160792/sista/unifi_AP_pcfnmy.jpg ",
+        "category": "AP 5Ghz",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus."
+    }
+]
