@@ -24,7 +24,7 @@ function BotonCompra({stock,inicio}) {
     <section className="container"> 
     <div>
       <br/>
-      <br/>
+      <span><h6> Quedan: {stock-cantidad}</h6></span>
       <br/>
         <button className="btn btn-outline-primary" onClick={saco}> - </button>
         <span><strong>    {cantidad}    </strong></span>

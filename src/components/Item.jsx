@@ -10,7 +10,7 @@ const Item = ({ item }) => {
                     <h2>USD {item.price} IVA Inc.</h2>
                 </div>
                 <div className="card-footer">
-                    <BotonCompra stock={item.stock} inicio={1}/>
+                    <BotonCompra stock={item.stock} inicio={0}/>
                 </div>
             </div>
         </div>
