@@ -4,7 +4,6 @@ import ItemList from './ItemList';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
-
     useEffect(() => {
         const traerProductos = new Promise((res, rej) => {
             setTimeout(() => {
@@ -23,11 +22,9 @@ const ItemListContainer = () => {
     return (
         <>
           <div>
-            <ItemList items={products} />
+            <ItemList items={products}/>
           </div>
-
         </>
     );
 };
-
 export default ItemListContainer;
