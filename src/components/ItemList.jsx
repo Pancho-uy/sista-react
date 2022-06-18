@@ -1,6 +1,5 @@
 import React from 'react';
 import Item from './Item';
-
 const ItemList = ({ items }) => {
     console.log(items);
     return (
@@ -11,8 +10,6 @@ const ItemList = ({ items }) => {
                 ))}
 {/*             </div> */}
         </div>
-
     );
 };
-
 export default ItemList;
