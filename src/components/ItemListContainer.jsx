@@ -18,7 +18,6 @@ const ItemListContainer = () => {
                 console.log(error);
             });
     }, []);
-
     return (
         <>
           <div>

@@ -1,6 +1,5 @@
-import { Alert } from "bootstrap";
 import { useState } from "react"
-import ElCarrito from "./Carrito";
+import detalle from "./Carrito";
 
 function BotonCompra({stock,inicio}) {
   
@@ -29,7 +28,6 @@ function BotonCompra({stock,inicio}) {
         <button className="btn btn-outline-primary" onClick={saco}> - </button>
         <span><strong>    {cantidad}    </strong></span>
         <button className="btn btn-outline-primary" onClick={agrego}> + </button>
-
     </div>
     </section>
   )
