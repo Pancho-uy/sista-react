@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ItemDetail({item}) {
   return (
@@ -10,6 +11,11 @@ function ItemDetail({item}) {
                 <p><strong>{item.category}</strong></p>
                 <p>{item.description}</p>
                 <p><strong>USD {item.price} IVA Incl.</strong></p>
+        </div>
+        <div className='card-footer'>
+          <Link to ="/">
+          <button className="btn btn-outline-primary"> Volver </button>
+          </Link>
         </div>
     </div>
     <br></br>  

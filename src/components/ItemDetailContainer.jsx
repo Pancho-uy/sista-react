@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import articulos from '../db/articulosDB.json';
 import ItemDetail from './ItemDetail';
+import { useParams } from 'react-router-dom';
 
-function ItemDetailContainer({detalle, itemID}) {
+const margenSup = {
+    margin: "7%"
+}
+
+function ItemDetailContainer({detalle}) {
     const [articulo, setArticulo] = useState({});
+    const {id} = useParams(); 
     useEffect(() => {
         const traerArticulo = new Promise((res, rej) => {
             setTimeout(() => {
-                res(articulos[itemID]);
-            }, 300); // Dos segundos de delay
+                res(articulos[id]);
+            }, 600); // Dos segundos de delay
         });
         traerArticulo 
             .then((res) => {
@@ -20,7 +26,7 @@ function ItemDetailContainer({detalle, itemID}) {
     }, []);
     return (
         <>
-          <div>
+          <div style={margenSup}>
             <h2>{detalle}</h2>
             <ItemDetail item={articulo}/>
           </div>
