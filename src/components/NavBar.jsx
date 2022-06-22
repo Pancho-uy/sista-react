@@ -18,14 +18,9 @@ export default function NavBar() {
                 <Link to="/">
                   <img src={logo} alt="logo"/></Link><strong style={{color : "white"}}>SISTA</strong>
               </li>
-{/*               <MenuItem titulo="Artículos" destino ="/#"/>
-              <MenuItem titulo="Ofertas" destino ="/#"/>
-              <MenuItem titulo="F.A.Q." destino ="/#"/>
-              <MenuItem titulo="Contacto" destino ="/#"/>
-              <MenuItem titulo="Login" destino ="/#"/> */}
-              <NavLink to = "/categoria/RoutersWIFI"> Router WIFI </NavLink>
-              <NavLink to = "/categoria/Routers">Routers SN WIFI </NavLink>
-              <NavLink to ="/categoria/AP5Ghz">AP 5Ghz</NavLink>
+              <MenuItem titulo="Routers WIFI" destino ="/categoria/RoutersWIFI"/>
+              <MenuItem titulo="Routers S/WIFI" destino ="/categoria/Routers"/> 
+              <MenuItem titulo="AP 5Ghz" destino ="/categoria/AP5Ghz"/>
             </ul>
           </section>
           <section>
