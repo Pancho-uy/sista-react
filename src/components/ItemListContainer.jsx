@@ -11,6 +11,7 @@ const margenSup = {
 const ItemListContainer = ({detalle}) => {
     const [products, setProducts] = useState([]);
     const {catID}= useParams();
+    let mensaje="";
     useEffect(() => {
         const traerProductos = new Promise((res, rej) => {
             setTimeout(() => {
@@ -21,9 +22,9 @@ const ItemListContainer = ({detalle}) => {
                         return categoria.category===catID;
                     })
                     res(filtrados);
-/*                     console.log("FILTRADOS: ",filtrados) */
+                     console.log("FILTRADOS: ",filtrados) 
                 }
-            }, 2000); // Dos segundos de delay
+            }, 500); // Dos segundos de delay
         });
         traerProductos
             .then((res) => {
@@ -33,12 +34,14 @@ const ItemListContainer = ({detalle}) => {
                 console.log(error);
             });
     }, [catID]);
+    if (products.length===0)
+        mensaje='NO HAY ARTÍCULOS EN ESTA CATEGORIA';
 /*     console.log("CATEGORIA: ",products) */
     return (
         <>
         <Saludo saludo={detalle}/>
         <div style={margenSup}>
-            <ItemList items={products}/>
+            <ItemList aviso={mensaje} items={products}/>
         </div>
         </>
     );
