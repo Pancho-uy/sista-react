@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-export default function MenuItem(item) {
+export default function MenuItem({titulo, destino}) {
   return (
-    <li className="nav-item">
-        <Link to= {item.destino} className="nav-link">{item.titulo}</Link>
+    <li className="navbar-nav nav-item">
+        <Link to= {destino} className="nav-link">{titulo}</Link>
     </li>
   )
 }

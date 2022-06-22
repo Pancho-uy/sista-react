@@ -8,12 +8,14 @@ export default function App() {
   return (
   <>
     <BrowserRouter>
-      <NavBar/>
-        <Routes>
-          <Route path="/" element={<ItemListContainer/>}/>
-          <Route path="/detalle/:id" element={<ItemDetailContainer detalle="Detalle del producto"/>}/>
-          <Route path="/categoria/:catID" element={<ItemListContainer detalle="Items por Categoría"/>}/>
-        </Routes>
+      <React.StrictMode>
+        <NavBar/>
+          <Routes>
+            <Route path="/" element={<ItemListContainer detalle="Bienvenidos a la Tienda"/>}/>
+            <Route path="/detalle/:id" element={<ItemDetailContainer detalle="Detalle del producto"/>}/>
+            <Route path="/categoria/:catID" element={<ItemListContainer detalle="Items por Categoría"/>}/>
+          </Routes>
+        </React.StrictMode>
     </BrowserRouter>
   </>
   );

@@ -1,8 +1,8 @@
 
-export default function ElSaludo() {
+export default function ElSaludo({saludo}) {
   return (
     <section className="secciones">
-       <h2 className="seccionAnima bajoTitulo">BIENVENIDO A LA TIENDA</h2>
+       <h2 className="seccionAnima bajoTitulo">{saludo}</h2>
     </section>
   );
 }

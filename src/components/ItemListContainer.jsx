@@ -4,12 +4,11 @@ import ItemList from './ItemList';
 import Saludo from './ElSaludo';
 import { useParams } from 'react-router-dom';
 
-
 const margenSup = {
     margin: "7%"
 }
 
-const ItemListContainer = () => {
+const ItemListContainer = ({detalle}) => {
     const [products, setProducts] = useState([]);
     const {catID}= useParams();
     useEffect(() => {
@@ -22,7 +21,7 @@ const ItemListContainer = () => {
                         return categoria.category===catID;
                     })
                     res(filtrados);
-                    console.log("FILTRADOS: ",filtrados)
+/*                     console.log("FILTRADOS: ",filtrados) */
                 }
             }, 2000); // Dos segundos de delay
         });
@@ -33,10 +32,11 @@ const ItemListContainer = () => {
             .catch((error) => {
                 console.log(error);
             });
-    }, []);
-    console.log("CATEGORIA: ",products)
+    }, [catID]);
+/*     console.log("CATEGORIA: ",products) */
     return (
         <>
+        <Saludo saludo={detalle}/>
         <div style={margenSup}>
             <ItemList items={products}/>
         </div>
