@@ -22,7 +22,6 @@ const ItemListContainer = ({detalle}) => {
                         return categoria.category===catID;
                     })
                     res(filtrados);
-  /*                    console.log("FILTRADOS: ",filtrados)  */
                 }
             }, 1000); // Un segundo de delay
         });
@@ -34,9 +33,9 @@ const ItemListContainer = ({detalle}) => {
                 console.log(error);
             });
     }, [catID]);
-    if (products.length===0)
+    console.log(catID)
+    if (products.length===0 && catID!==undefined)
         mensaje='NO HAY ARTÍCULOS EN ESTA CATEGORIA';
-/*     console.log("CATEGORIA: ",products) */
     return (
         <>
         <Saludo saludo={detalle}/>
