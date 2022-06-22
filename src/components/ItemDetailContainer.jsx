@@ -31,7 +31,7 @@ function ItemDetailContainer({detalle}) {
             <ItemDetail item={articulo}/>
           </div>
         </>
-    );
+    ); 
 }
 
 export default ItemDetailContainer

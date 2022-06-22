@@ -11,9 +11,8 @@ export default function App() {
       <NavBar/>
         <Routes>
           <Route path="/" element={<ItemListContainer/>}/>
-          {/* 1:08:50 del video de la clase seguir desde ahi */}
           <Route path="/detalle/:id" element={<ItemDetailContainer detalle="Detalle del producto"/>}/>
-          <Route path="/category/:categoryID" element={<ItemDetailContainer detalle="Categoria de items"/>}/>
+          <Route path="/categoria/:catID" element={<ItemListContainer detalle="Items por Categoría"/>}/>
         </Routes>
     </BrowserRouter>
   </>

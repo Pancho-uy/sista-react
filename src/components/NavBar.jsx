@@ -1,5 +1,5 @@
 // Menú principal
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../logo_menu.png";
 import ElCarrito from "./Carrito.jsx";
 import MenuItem from "./MenuItem";
@@ -18,11 +18,14 @@ export default function NavBar() {
                 <Link to="/">
                   <img src={logo} alt="logo"/></Link><strong style={{color : "white"}}>SISTA</strong>
               </li>
-              <MenuItem titulo="Artículos" destino ="/#"/>
+{/*               <MenuItem titulo="Artículos" destino ="/#"/>
               <MenuItem titulo="Ofertas" destino ="/#"/>
               <MenuItem titulo="F.A.Q." destino ="/#"/>
               <MenuItem titulo="Contacto" destino ="/#"/>
-              <MenuItem titulo="Login" destino ="/#"/>
+              <MenuItem titulo="Login" destino ="/#"/> */}
+              <NavLink to = "/categoria/RoutersWIFI"> Router WIFI </NavLink>
+              <NavLink to = "/categoria/Routers">Routers SN WIFI </NavLink>
+              <NavLink to ="/categoria/AP5Ghz">AP 5Ghz</NavLink>
             </ul>
           </section>
           <section>

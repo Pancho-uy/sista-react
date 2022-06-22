@@ -14,7 +14,7 @@ function ItemDetail({item}) {
         </div>
         <div className='card-footer'>
           <Link to ="/">
-          <button className="btn btn-outline-primary"> Volver </button>
+            <button className="btn btn-outline-primary"> Volver </button>
           </Link>
         </div>
     </div>

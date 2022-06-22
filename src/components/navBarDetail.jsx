@@ -2,13 +2,13 @@
 import { Link } from "react-router-dom";
 
 const margenSup = {
-  padding: "6%"
+  margin: "7%"
 }
 /* ver video 1:56:47 */
 export default function NavBar() {
   return (
     <>
-    <div style={margenSup}>
+    <div className="container-fluid" style={margenSup}>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top fondoMio" style={margenSup}>
         <section className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

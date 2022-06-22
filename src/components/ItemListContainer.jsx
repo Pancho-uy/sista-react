@@ -3,7 +3,11 @@ import productos from '../db/articulosDB.json';
 import ItemList from './ItemList';
 import Saludo from './ElSaludo';
 import { useParams } from 'react-router-dom';
-import NavBarDetail from './navBarDetail';
+
+
+const margenSup = {
+    margin: "7%"
+}
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
@@ -14,10 +18,11 @@ const ItemListContainer = () => {
                 if (catID === undefined)
                     res(productos);
                 else{
-                    const filtrados = products.filter(categoria =>{
-                        return catID===catID;
+                    const filtrados = productos.filter(categoria =>{
+                        return categoria.category===catID;
                     })
                     res(filtrados);
+                    console.log("FILTRADOS: ",filtrados)
                 }
             }, 2000); // Dos segundos de delay
         });
@@ -29,13 +34,12 @@ const ItemListContainer = () => {
                 console.log(error);
             });
     }, []);
+    console.log("CATEGORIA: ",products)
     return (
         <>
-          <div>
-            <NavBarDetail/>
-            <Saludo/>
+        <div style={margenSup}>
             <ItemList items={products}/>
-          </div>
+        </div>
         </>
     );
 };

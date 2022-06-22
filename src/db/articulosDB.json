@@ -5,8 +5,7 @@
         "price": 110.00,
         "stock": 8,
         "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/v1654899168/sista/MK951_jxwx2v.jpg",
-        "category": "Routers c/WIFI",
-        "categoryID":0,
+        "category": "RoutersWIFI",
         "description": "El RB951G-2HnD es un AP inalámbrico SOHO Gigabit con una CPU Atheros de nueva generación y más potencia de procesamiento. Tiene cinco puertos Gigabit Ethernet, un puerto USB 2.0 y un punto de acceso inalámbrico 802.11b/g/n de 2,4 GHz de alta potencia con antenas integradas. En comparación con el modelo anterior RB751G-2HnD, tiene una CPU de 600 MHz más potente (en lugar de 400 MHz) , más RAM: 128 MB en lugar de 64 MB, mismo factor de forma y precio. El dispositivo es muy pequeño y se verá bien en cualquier hogar u oficina, se proporcionan orificios de anclaje para montaje en pared. El paquete contiene RouterBOARD 951G-2HnD en una caja de plástico y adaptador de corriente."
     },
     {
@@ -15,8 +14,7 @@
         "price": 85.00,
         "stock": 10,
         "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/v1654899168/sista/MK750_hkjdt4.jpg",
-        "category": "Routers s/WIFI",
-        "categoryID":1,
+        "category": "RoutersWIFI",
         "description": "El RB750GL es un pequeño enrutador SOHO en una caja de plástico blanca. Tiene cinco puertos Gigabit Ethernet independientes y funcionalidad de chip conmutador opcional para rendimiento Gigabit a velocidad de cable. Es probablemente el enrutador Gigabit compatible con MPLS más asequible del mercado y ahora es aún más asequible que antes. En comparación con el modelo anterior, el RB750GL tiene casi el mismo rendimiento, pero tiene un costo significativamente menor. Con su diseño compacto y apariencia limpia, encajará perfectamente en cualquier entorno SOHO. La caja contiene: RB750GL, estuche de plástico, adaptador de corriente"
     },
     {
@@ -25,8 +23,8 @@
         "price": 180.00,
         "stock": 5,
         "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/v1655160792/sista/unifi_AP_pcfnmy.jpg ",
-        "category": "AP 5Ghz",
-        "categoryID":2,
+        "category": "AP5Ghz",
         "description": "El Access Point AC Long-Range (UAP AC LR) es un punto de acceso WiFi 802.11ac para interiores de alto rendimiento que utiliza la tecnología Wave 1 para alcanzar una tasa de rendimiento total de más de 1,2 Gbps con sus bandas de 5 y 2,4 GHz. El UAP AC LR también tiene un rango de transmisión impresionantemente largo de hasta 183 metros (600 pies), lo que le permite establecer y mantener una conectividad de calidad a mayores distancias. Este punto de acceso funciona con PoE 802.3af o PoE pasivo de 24 V y está equipado con (1) puerto GbE RJ45 para conectividad LAN de alta velocidad. El UAP AC LR se puede configurar en minutos y administrar completamente con la aplicación web o la aplicación móvil UniFi Network."
     }
+    
 ]
