@@ -24,7 +24,7 @@ const ItemListContainer = ({detalle}) => {
                     res(filtrados);
   /*                    console.log("FILTRADOS: ",filtrados)  */
                 }
-            }, 500); // Medio segundo de delay
+            }, 1000); // Un segundo de delay
         });
         traerProductos
             .then((res) => {
