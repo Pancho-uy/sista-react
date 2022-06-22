@@ -22,9 +22,9 @@ const ItemListContainer = ({detalle}) => {
                         return categoria.category===catID;
                     })
                     res(filtrados);
-                     console.log("FILTRADOS: ",filtrados) 
+  /*                    console.log("FILTRADOS: ",filtrados)  */
                 }
-            }, 500); // Dos segundos de delay
+            }, 500); // Medio segundo de delay
         });
         traerProductos
             .then((res) => {
