@@ -1,5 +1,5 @@
 // Menú principal
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../logo_menu.png";
 import ElCarrito from "./Carrito.jsx";
 import MenuItem from "./MenuItem";
