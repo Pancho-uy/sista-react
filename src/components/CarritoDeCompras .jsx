@@ -2,7 +2,7 @@
 const margenSup = {
   margin: "7%"
 }
-function CarritoDeCompras({Detalle}) {
+function CarritoDeCompras() {
   return (
     <div style={margenSup}>
       <h2>Carrito de Compras</h2>

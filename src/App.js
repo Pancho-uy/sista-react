@@ -15,7 +15,7 @@ export default function App() {
             <Route path="/" element={<ItemListContainer detalle="Bienvenidos a la Tienda"/>}/>
             <Route path="/detalle/:id" element={<ItemDetailContainer detalle="Detalle del producto"/>}/>
             <Route path="/categoria/:catID" element={<ItemListContainer detalle="Items por Categoría"/>}/>
-            <Route path="/carrito/" element={<CarritoDeCompras detalle="Carrito de Compras"/>}/>
+            <Route path="/carrito/" element={<CarritoDeCompras/>}/>
           </Routes>
         </React.StrictMode>
     </BrowserRouter>
