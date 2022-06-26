@@ -1,16 +1,16 @@
-import BotonCantidad from './ItemCount';
+import { NavLink } from "react-router-dom";
 
 const Item = ({ item }) => {
+    const miURL=`/detalle/${item.ID}`;
     return (
         <div class="col-sm">
             <div className="card">
                 <div className="card-body">
-                    <img src={item.img} alt="imagen del articulo"></img>
+                    <NavLink to={miURL}>
+                        <img src={item.img} alt="imagen del articulo"></img>
+                    </NavLink>
                     <h5 className="card-title">{item.name}</h5>
                     <h2>USD {item.price} IVA Inc.</h2>
-                </div>
-                <div className="card-footer">
-                    <BotonCantidad itemID = {item.ID} stock={item.stock} inicio={0}/>
                 </div>
             </div>
         </div>

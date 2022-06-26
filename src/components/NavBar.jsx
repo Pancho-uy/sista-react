@@ -1,7 +1,7 @@
 // Menú principal
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../logo_menu.png";
-import ElCarrito from "./Carrito.jsx";
+import Carrito from "./Cart.jsx";
 import MenuItem from "./MenuItem";
 
 export default function NavBar() {
@@ -15,8 +15,8 @@ export default function NavBar() {
           <section className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to="/">
-                  <img src={logo} alt="logo"/></Link><strong style={{color : "white"}}>SISTA</strong>
+                <NavLink to="/">
+                  <img src={logo} alt="logo"/></NavLink><strong style={{color : "white"}}>SISTA</strong>
               </li>
               <MenuItem titulo="Routers WIFI" destino ="/categoria/RoutersWIFI"/>
               <MenuItem titulo="Routers S/WIFI" destino ="/categoria/Routers"/> 
@@ -24,7 +24,7 @@ export default function NavBar() {
             </ul>
           </section>
           <section>
-           <ElCarrito/>
+           <Carrito/>
         </section>
         </section>
       </nav>
