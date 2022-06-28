@@ -1,14 +1,21 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../contexto/Contexto';
 import BotonCompra from './ItemCount';
 
 
 function ItemDetail({item}) {
+  const {addToCart} = useContext(CartContext)
+  
   const [cant, setCantidad]=useState(0);
-  const onAdd= (cantidad)=>{
+
+  const onAdd= (item,cantidad)=>{
     console.log("Cantidad al carrito: ",cantidad)
       setCantidad(cantidad);
-  }
+      addToCart(item, cantidad);
+    }
+
+
   return (
     <>
      <div className="card">
@@ -19,7 +26,7 @@ function ItemDetail({item}) {
                 <p>{item.description}</p>
                 <p><strong>USD {item.price} IVA Incl.</strong></p>
         </div>
-        <div className='card-footer'>
+        <div className='card-footer'> 
           <div className='row'>
             <div className="col">
               {

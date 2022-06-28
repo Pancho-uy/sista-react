@@ -1,12 +1,17 @@
-import carrito from "../carrito.png"
-/* import ItemsEnCarrito from "./ItemCount" */
+import React from 'react';
+import { useContext } from 'react';
+import { CartContext } from '../contexto/Contexto';
 
-export default function ElCarrito() {
-  return (
-    <>
-        <a className="nav-link" href="/#">
-            <img className="float-end" src={carrito} alt="carrito" width="32" height="32"/> 
-        </a>
-    </>
-  )
-}
+const Cart = () => {
+    const { addToCart } = useContext(CartContext);
+
+    return (
+        <div>
+            <div>
+                <button onClick={addToCart}>Click</button>
+            </div>
+        </div>
+    );
+};
+
+export default Cart;

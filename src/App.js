@@ -4,10 +4,11 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import {BrowserRouter,Route, Routes} from "react-router-dom"
 import CarritoDeCompras from './components/CarritoDeCompras '
+import { CartProvider } from "./contexto/Contexto";
 
 export default function App() {
   return (
-  <>
+  <CartProvider>
     <BrowserRouter>
       <React.StrictMode>
         <NavBar/>
@@ -19,7 +20,7 @@ export default function App() {
           </Routes>
         </React.StrictMode>
     </BrowserRouter>
-  </>
+  </CartProvider>
   );
 }
 

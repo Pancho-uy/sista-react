@@ -1,7 +1,7 @@
 // Menú principal
 import { NavLink } from "react-router-dom";
 import logo from "../logo_menu.png";
-import Carrito from "./Cart.jsx";
+import Carrito from "./MiCart.jsx";
 import MenuItem from "./MenuItem";
 
 export default function NavBar() {
