@@ -17,26 +17,23 @@ export const CartProvider = ({ children }) => {
     };
 
     // Agrego las cantidades de los items comprados al carrito
+    
     const addToCart = (item, cantidad) => {
-        console.log("EL ITEM: ",...item)
-        if (isInCart(item.id)) {
-            //aca sumo cantidad a item que ya agegué
+        console.log("EL ITEM: ",item)
+        if (isInCart(item.ID)) {
+            //aca sumo cantidad seleccionada a item que ya existe en en carrito
             console.log('En el carrito, le sumo items');
-            console.log("ITEMSS: ",{...item});
-            console.log("CANTIDAD",cantidad);
+
         } else {
-            // aca agrego cantidad de item nuevo
-            console.log({...item});
-            console.log(cantidad);
+            // aca agrego la cantidad seleccionada del item nuevo
             setCart([...cart, { ...item, cantidad }]);
         }
     };
 
-    //función para verificar si el producto ya está en el carrito
-    const isInCart = (ID) => {
-        //some devuelve true o false
-        console.log("ID ",ID)
-        return cart.some((prod) => prod.ID === ID);
+    //a ver si el producto ya está en el carrito
+    const isInCart = (id) => {
+        console.log("ID ",id)
+        return cart.some((prod) => prod.ID === id);
     };
 
     //función para calcular $ del carrito
@@ -45,7 +42,7 @@ export const CartProvider = ({ children }) => {
 
     //funcion para eliminar un item del carrito
 
-    //funcion para eliminar todos los items del carrito
+    //Borro todos los items del carrito
     const clearCart = () => {
         setCart([]);
     };

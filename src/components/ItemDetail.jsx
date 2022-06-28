@@ -9,7 +9,7 @@ function ItemDetail({item}) {
   
   const [cant, setCantidad]=useState(0);
 
-  const onAdd= (item,cantidad)=>{
+  const onAdd= (cantidad)=>{
     console.log("Cantidad al carrito: ",cantidad)
       setCantidad(cantidad);
       addToCart(item, cantidad);
