@@ -1,7 +1,6 @@
 import { createContext, useState, useEffect } from 'react';
 
 
-
 export const CartContext = createContext();   // Contexto para envolver toda la APP
 
 export const CartProvider = ({ children }) => {
@@ -9,20 +8,23 @@ export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        console.log("CART",cart);
+        console.log(cart);
     }, [cart]);
 
-    const micarrito = () => {
-        console.log('contexto');
-    };
-
     // Agrego las cantidades de los items comprados al carrito
-    
+
     const addToCart = (item, cantidad) => {
-        console.log("EL ITEM: ",item)
+        console.log("EL ITEM: ",cart)
         if (isInCart(item.ID)) {
-            //aca sumo cantidad seleccionada a item que ya existe en en carrito
-            console.log('En el carrito, le sumo items');
+            let indice = cart.findIndex(elitem=>elitem.ID===item.ID);
+            let articulo = cart[indice];
+            articulo.cantidad=articulo.cantidad+cantidad;
+            let nombre = cart[indice].name
+            const CarritoTemp= [...cart];
+            CarritoTemp.splice(indice,1,articulo);
+            setCart([...CarritoTemp]);
+            // Muestro por console.log el carrito con el articulo con la cantidad sumada
+            console.log("Item ", nombre," con la cantidad agregada")
 
         } else {
             // aca agrego la cantidad seleccionada del item nuevo
@@ -32,15 +34,24 @@ export const CartProvider = ({ children }) => {
 
     //a ver si el producto ya está en el carrito
     const isInCart = (id) => {
-        console.log("ID ",id)
+   /*      console.log("ID ",id) */
         return cart.some((prod) => prod.ID === id);
     };
 
-    //función para calcular $ del carrito
+    const borroItem = (item) => {
 
-    //función para calcular total de unidades que tengo en el carrito y mostrarlas en el cartWidget
-
-    //funcion para eliminar un item del carrito
+        if (isInCart(item.ID)) {
+            let indice = cart.findIndex(elitem=>elitem.ID!==item.ID);
+            let articulo = cart[indice];
+            let nombre = cart[indice].name
+            const CarritoTemp= [...cart];
+            CarritoTemp.filter(indice,1,articulo);
+            setCart([...CarritoTemp]);
+            // Muestro por console.log el carrito con el articulo con la cantidad sumada
+            console.log("Item ", nombre," eliminado")}
+        else
+            alert("ERROR, carrito vacío")
+        }
 
     //Borro todos los items del carrito
     const clearCart = () => {
@@ -48,7 +59,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cart, micarrito, addToCart, clearCart }}>
+        <CartContext.Provider value={{ cart, borroItem, addToCart, clearCart }}>
             {children}
         </CartContext.Provider>
     );

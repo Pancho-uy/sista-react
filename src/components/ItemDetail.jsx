@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../contexto/Contexto';
 import BotonCompra from './ItemCount';
-
+/* import ItemDelete from './itemDelete'; */
 
 function ItemDetail({item}) {
   const {addToCart} = useContext(CartContext)
@@ -15,6 +15,7 @@ function ItemDetail({item}) {
       addToCart(item, cantidad);
     }
 
+  const delItem = (item)=>{ borroItem(item)}
 
   return (
     <>
@@ -35,8 +36,10 @@ function ItemDetail({item}) {
                 <BotonCompra itemID = {item.ID} stock={item.stock} inicio={1} onAdd={onAdd}/>
                 )
                 :
-                (
+                (<>
                   <Link to ="/carrito/"><button className="btn btn-outline-primary">Ir al Carrito </button></Link>
+                  <BorroItem delItem = {delItem}/>
+                  </>
                 )
               }
             </div>
