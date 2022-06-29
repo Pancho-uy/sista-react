@@ -2,19 +2,17 @@
 import React from 'react';
 /* import { useContext } from 'react';
 import { CartContext } from '../contexto/Contexto';
-/* import Item from './Item'; */
+ */
 
 const margenSup = {
   margin: "7%"
 }
-const CarritoDeCompras=() => {
-/*   const {agregoAlCart}=useContext(CartContext) */
+const CarritoDeCompras=(item,borroItem) => {
 
   return (
-    <div style={margenSup}>
-      <h2>Carrito de Compras</h2>
-      
-    </div>
+      <div style={margenSup}>
+        <h2>Carrito de Compras</h2>
+      </div>
   )
 }
 
