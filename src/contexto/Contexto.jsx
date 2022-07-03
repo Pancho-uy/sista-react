@@ -25,7 +25,7 @@ export const CartProvider = ({ children }) => {
     function totalCompra() {
         let montoTotal = 0;
         cart.forEach((item) => (montoTotal = montoTotal + (item.cantidad*item.price)));
-        let ret="USD"+montoTotal.toFixed(2);
+        let ret="USD "+montoTotal.toFixed(2);
         return ret;
     }
     // Agrego las cantidades de los items comprados al carrito

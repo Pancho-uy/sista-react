@@ -7,6 +7,10 @@ const divCentrado={
   margin: "0,50%,0,50%"
 }
 
+const centrado={
+  width: "40rem",
+}
+
 const margenSup = {
   margin: "7rem"
 }
@@ -30,27 +34,34 @@ const CarritoDeCompras=() => {
     <div style={margenSup}>
       <div class ="row" style={margenSup}>
         <h2>Carrito de Compras</h2>
+        <br/>
+        <br/>
         <div class="row">
         {
-          cart.map((item) => (
+          cart.map((item) =>
+          (
             <div class="col-md-4">
-            <div key={item.ID} className='card border-info mb-3' style={anchoCard}>
-                <div  key={item.ID} >
-                  <img src={item.img} alt="" height={'95rem'}></img>
-                  <h5 className='card-title'>{item.name}</h5>
-                </div>
-                <p className="card-text">Precio unitario: USD {item.price}</p>
-            <p className="card-text">Unidades compradas: {item.cantidad}</p>
-            <button className='btn btn-danger' onClick={() => borroItems(item.ID)}>Quitar del carrito</button>
-            </div>
+              <div key={item.ID} className='card border-info mb-3' style={anchoCard}>
+                  <div  key={item.ID} >
+                    <img src={item.img} alt="" height={'95rem'}></img>
+                    <h5 className='card-title'>{item.name}</h5>
+                  </div>
+                  <p className="card-text">Precio unitario: USD {item.price}</p>
+                  <p className="card-text">Unidades compradas: {item.cantidad}</p>
+                  <p className="card-text strong">Sub-Total: USD {item.cantidad*item.price}</p>
+                  <button className='btn btn-danger' onClick={() => borroItems(item.ID)}>Quitar del carrito</button>
+              </div>
             </div>
           ))
        }
        </div>
       </div>
       <div className="row">
-        <h3> Total de la compra: {totalCompra()}</h3>
-        <button className="btn btn-danger" style={divCentrado}>Terminar Compra </button>
+      <hr/>
+        <div class="mx-auto" style={centrado}>
+          <h3> Total de la compra: {totalCompra()}</h3>
+          <button className="btn btn-danger" style={anchoCard}>Terminar Compra </button>
+        </div>
       </div>
     </div>
     
