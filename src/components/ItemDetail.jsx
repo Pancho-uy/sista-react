@@ -5,6 +5,7 @@ import BotonCompra from './ItemCount';
 
 function ItemDetail({item}) {
   const {addToCart} = useContext(CartContext);
+  const {borroItems} = useContext(CartContext);
 
   const [cant, setCantidad]=useState(0);
 
@@ -33,11 +34,15 @@ function ItemDetail({item}) {
                 <BotonCompra itemID = {item.ID} stock={item.stock} inicio={1} onAdd={onAdd}/>
                 )
                 :
-                (<>
-                  <Link to ="/carrito/"><button className="btn btn-outline-primary">Ir al Carrito </button></Link>
+                (
+                  <>
+                    <button className='btn btn-danger' onClick={() => borroItems(item.ID)}>Quitar del carrito</button>
+                    <Link to ="/"><button className="btn btn-outline-primary">Seguir comprando </button></Link>
+                    <Link to ="/carrito/"><button className="btn btn-outline-primary">Ir al Carrito </button></Link>
                   </>
                 )
-              }
+                }
+
             </div>
           </div>
         </div>

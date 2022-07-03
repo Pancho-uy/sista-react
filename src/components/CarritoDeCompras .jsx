@@ -3,7 +3,9 @@ import { CartContext } from '../contexto/Contexto';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-
+const divCentrado={
+  margin: "0,50%,0,50%"
+}
 
 const margenSup = {
   margin: "7rem"
@@ -15,6 +17,8 @@ const anchoCard = {
 const CarritoDeCompras=() => {
   const {cart} = useContext(CartContext);
   const {borroItems} = useContext(CartContext);
+  const {totalCompra} = useContext(CartContext);
+
   if (cart.length === 0) {
     return (
     <>
@@ -44,7 +48,12 @@ const CarritoDeCompras=() => {
        }
        </div>
       </div>
+      <div className="row">
+        <h3> Total de la compra: {totalCompra()}</h3>
+        <button className="btn btn-danger" style={divCentrado}>Terminar Compra </button>
+      </div>
     </div>
+    
   );
       }
 export default CarritoDeCompras 
