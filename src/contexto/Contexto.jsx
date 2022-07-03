@@ -54,7 +54,7 @@ export const CartProvider = ({ children }) => {
         return cart.some((prod) => prod.ID === id); // Si lo encuentro retono TRUE
     };
 
-    // Remuevo el carrito el item seleccionado
+    // Remuevo el carrito el item seleccionado (en realidad dejo los demas...)
     function borroItems(ID) {
         let carritoFiltrado=cart.filter(item=>item.ID!==ID);
         setCart(carritoFiltrado);
@@ -63,6 +63,7 @@ export const CartProvider = ({ children }) => {
     const clearCart = () => {
         setCart([]);           //Borro todos los items del carrito
     };
+
     return (
         <CartContext.Provider value={{ cart, borroItems, addToCart, clearCart, totalUnidades, totalCompra}}>
             {children}
