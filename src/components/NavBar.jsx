@@ -21,6 +21,8 @@ export default function NavBar() {
               <MenuItem titulo="Routers WIFI" destino ="/categoria/RoutersWIFI"/>
               <MenuItem titulo="Routers S/WIFI" destino ="/categoria/Routers"/> 
               <MenuItem titulo="AP 5Ghz" destino ="/categoria/AP5Ghz"/>
+              <MenuItem titulo="AirFiber" destino ="/categoria/AirFiber"/>
+              <MenuItem titulo="Solucion RF" destino ="/categoria/SolucionRF"/>
             </ul>
           </section>
           <section>
