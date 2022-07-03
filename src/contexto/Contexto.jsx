@@ -54,6 +54,7 @@ export const CartProvider = ({ children }) => {
         return cart.some((prod) => prod.ID === id); // Si lo encuentro retono TRUE
     };
 
+    // Remuevo el carrito el item seleccionado
     function borroItems(ID) {
         let carritoFiltrado=cart.filter(item=>item.ID!==ID);
         setCart(carritoFiltrado);
