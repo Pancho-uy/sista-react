@@ -11,6 +11,10 @@
 /* --Fin de importacion de FONTS -- */
 /* ESTILOS PROPIOS */
 
+
+.card{
+  border: none;
+}
 .divCentrado
 {
   width: 100%;

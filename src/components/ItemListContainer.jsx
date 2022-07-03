@@ -23,7 +23,7 @@ const ItemListContainer = ({detalle}) => {
                     })
                     res(filtrados);
                 }
-            }, 1000); // Un segundo de delay
+            }, 500); // delay
         });
         traerProductos
             .then((res) => {
@@ -33,15 +33,15 @@ const ItemListContainer = ({detalle}) => {
                 console.log(error);
             });
     }, [catID]);
-    console.log(catID)
+
     if (products.length===0 && catID!==undefined)
         mensaje='NO HAY ARTÍCULOS EN ESTA CATEGORIA';
     return (
         <>
-        <Saludo saludo={detalle}/>
-        <div style={margenSup}>
-            <ItemList aviso={mensaje} items={products}/>
-        </div>
+            <Saludo saludo={detalle}/>
+            <div style={margenSup}>
+                <ItemList aviso={mensaje} items={products}/>
+            </div>
         </>
     );
 };

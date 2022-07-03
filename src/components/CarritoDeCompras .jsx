@@ -1,6 +1,7 @@
 /* CARRITO DE COMPRA */
 import { CartContext } from '../contexto/Contexto';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,8 +14,14 @@ const anchoCard = {
 }
 const CarritoDeCompras=() => {
   const {cart} = useContext(CartContext);
-  const {borroItem} = useContext(CartContext);
-
+  const {borroItems} = useContext(CartContext);
+  if (cart.length === 0) {
+    return (
+    <>
+      <h2 style={margenSup} className="seccionAnima">No hay items en el carrito</h2>
+      <Link to ="/"><button className="btn btn-danger divCentrado">Ir al Inicio </button></Link>
+    </>
+    )}
   return (
     <div style={margenSup}>
       <div class ="row" style={margenSup}>
@@ -28,9 +35,9 @@ const CarritoDeCompras=() => {
                   <img src={item.img} alt="" height={'95rem'}></img>
                   <h5 className='card-title'>{item.name}</h5>
                 </div>
-                <p>Precio unitario: USD {item.price}</p>
-            <p>Unidades compradas: {item.cantidad}</p>
-            <button className='btn btn-danger' onClick={() => borroItem(item.ID)}>Borrar</button>
+                <p className="card-text">Precio unitario: USD {item.price}</p>
+            <p className="card-text">Unidades compradas: {item.cantidad}</p>
+            <button className='btn btn-danger' onClick={() => borroItems(item.ID)}>Quitar del carrito</button>
             </div>
             </div>
           ))
