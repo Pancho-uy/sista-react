@@ -36,13 +36,12 @@ function ItemDetail({item}) {
                 :
                 (
                   <>
-                    <button className='btn btn-danger' onClick={() => borroItems(item.ID)}>Quitar del carrito</button>
                     <Link to ="/"><button className="btn btn-outline-primary">Seguir comprando </button></Link>
                     <Link to ="/carrito/"><button className="btn btn-outline-primary">Ir al Carrito </button></Link>
+                    <Link to ="/"><button className='btn btn-danger' onClick={() => borroItems(item.ID)}>Quitar del carrito</button></Link>
                   </>
                 )
                 }
-
             </div>
           </div>
         </div>

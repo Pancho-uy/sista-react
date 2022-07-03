@@ -58,6 +58,7 @@ export const CartProvider = ({ children }) => {
     function borroItems(ID) {
         let carritoFiltrado=cart.filter(item=>item.ID!==ID);
         setCart(carritoFiltrado);
+
     }
 
     const clearCart = () => {
