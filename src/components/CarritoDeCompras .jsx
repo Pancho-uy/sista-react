@@ -3,9 +3,9 @@ import { CartContext } from '../contexto/Contexto';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-const divCentrado={
+/* const divCentrado={
   margin: "0,50%,0,50%"
-}
+} */
 
 const centrado={
   width: "40rem",
