@@ -37,38 +37,38 @@
     },
     {
         "ID":4,
-        "name": "UniFi AP",
-        "price": 180.00,
-        "stock": 5,
-        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/v1655160792/sista/unifi_AP_pcfnmy.jpg ",
-        "category": "AP5Ghz",
-        "description": "El Access Point AC Long-Range (UAP AC LR) es un punto de acceso WiFi 802.11ac para interiores de alto rendimiento que utiliza la tecnología Wave 1 para alcanzar una tasa de rendimiento total de más de 1,2 Gbps con sus bandas de 5 y 2,4 GHz. El UAP AC LR también tiene un rango de transmisión impresionantemente largo de hasta 183 metros (600 pies), lo que le permite establecer y mantener una conectividad de calidad a mayores distancias. Este punto de acceso funciona con PoE 802.3af o PoE pasivo de 24 V y está equipado con (1) puerto GbE RJ45 para conectividad LAN de alta velocidad. El UAP AC LR se puede configurar en minutos y administrar completamente con la aplicación web o la aplicación móvil UniFi Network."
+        "name": "Archer C80",
+        "price": 130.00,
+        "stock": 30,
+        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/c_scale,h_200,w_329/v1656876825/sista/1_large_1576202231392h_nij5rt.jpg",
+        "category": "RoutersWIFI",
+        "description": "Archer C80 entrega una WiFi de alta performance y económica con velocidades totales de hasta 1900 Mbps. Maneja tareas simples como enviar correos electrónicos o navegar por la web en la banda de 2.4 GHz y tareas intensivas de ancho de banda como juegos en línea o transmisión 4K / 8K UHD en la banda de 5 GHz, todo sin lag."
     },
     {
         "ID":5,
-        "name": "UniFi AP",
-        "price": 180.00,
-        "stock": 5,
-        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/v1655160792/sista/unifi_AP_pcfnmy.jpg ",
-        "category": "AP5Ghz",
-        "description": "El Access Point AC Long-Range (UAP AC LR) es un punto de acceso WiFi 802.11ac para interiores de alto rendimiento que utiliza la tecnología Wave 1 para alcanzar una tasa de rendimiento total de más de 1,2 Gbps con sus bandas de 5 y 2,4 GHz. El UAP AC LR también tiene un rango de transmisión impresionantemente largo de hasta 183 metros (600 pies), lo que le permite establecer y mantener una conectividad de calidad a mayores distancias. Este punto de acceso funciona con PoE 802.3af o PoE pasivo de 24 V y está equipado con (1) puerto GbE RJ45 para conectividad LAN de alta velocidad. El UAP AC LR se puede configurar en minutos y administrar completamente con la aplicación web o la aplicación móvil UniFi Network."
+        "name": "PMP 450",
+        "price": 1080.00,
+        "stock": 15,
+        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/c_scale,h_200/v1656877400/sista/450i_Sector_HERO_gtez6g.png",
+        "category": "SolucionRF",
+        "description": "La plataforma 450 líder en la industria de Cambium Networks incluye las nuevas radios PMP 450i y PTP 450i. La plataforma de productos de punto de acceso PMP 450i es la solución de banda ancha inalámbrica de grado industrial más escalable disponible."
     },    
     {
         "ID":6,
-        "name": "UniFi AP",
-        "price": 180.00,
-        "stock": 5,
-        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/v1655160792/sista/unifi_AP_pcfnmy.jpg ",
+        "name": "Access Point AC Mesh",
+        "price": 280.00,
+        "stock": 20,
+        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/c_scale,h_200/v1656879050/sista/UAP-AC-M_Front-2_grande_qtr1v7.webp",
         "category": "AP5Ghz",
-        "description": "El Access Point AC Long-Range (UAP AC LR) es un punto de acceso WiFi 802.11ac para interiores de alto rendimiento que utiliza la tecnología Wave 1 para alcanzar una tasa de rendimiento total de más de 1,2 Gbps con sus bandas de 5 y 2,4 GHz. El UAP AC LR también tiene un rango de transmisión impresionantemente largo de hasta 183 metros (600 pies), lo que le permite establecer y mantener una conectividad de calidad a mayores distancias. Este punto de acceso funciona con PoE 802.3af o PoE pasivo de 24 V y está equipado con (1) puerto GbE RJ45 para conectividad LAN de alta velocidad. El UAP AC LR se puede configurar en minutos y administrar completamente con la aplicación web o la aplicación móvil UniFi Network."
+        "description": "El punto de acceso AC Mesh (UAP AC Mesh) es un punto de acceso Wi-Fi 802.11ac de alto rendimiento, listo para exteriores, de doble banda que puede alcanzar una tasa de rendimiento agregado de más de 1,1 Gbps con sus bandas de 5 GHz y 2,4 GHz. El UAP AC Mesh cuenta con dos antenas WIFi omnidireccionales (2x2 MIMO) para brindar una cobertura inalámbrica robusta y extensa de 360°, así como (2) conectores RP-SMA que se pueden usar junto con las antenas para dar forma a un patrón personalizado. Este punto de acceso se alimenta con PoE 802.3af o PoE pasivo de 24 V y está equipado con (1) puerto GbE RJ45 para conectividad LAN de alta velocidad. UAP AC Mesh se puede configurar en minutos y administrar completamente con la aplicación web o la aplicación móvil UniFi Network."
     },
     {
         "ID":7,
-        "name": "UniFi AP",
-        "price": 180.00,
-        "stock": 5,
-        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/v1655160792/sista/unifi_AP_pcfnmy.jpg ",
-        "category": "AP5Ghz",
-        "description": "El Access Point AC Long-Range (UAP AC LR) es un punto de acceso WiFi 802.11ac para interiores de alto rendimiento que utiliza la tecnología Wave 1 para alcanzar una tasa de rendimiento total de más de 1,2 Gbps con sus bandas de 5 y 2,4 GHz. El UAP AC LR también tiene un rango de transmisión impresionantemente largo de hasta 183 metros (600 pies), lo que le permite establecer y mantener una conectividad de calidad a mayores distancias. Este punto de acceso funciona con PoE 802.3af o PoE pasivo de 24 V y está equipado con (1) puerto GbE RJ45 para conectividad LAN de alta velocidad. El UAP AC LR se puede configurar en minutos y administrar completamente con la aplicación web o la aplicación móvil UniFi Network."
+        "name": "Puente airFiber de 24 GHz",
+        "price": 4280.00,
+        "stock": 3,
+        "img": "https://res.cloudinary.com/dxgud4zt2/image/upload/c_scale,h_200/v1656879651/sista/airfiber_af24_right_angle_with_shadow_reflection_1024x1024_1_jb6pyj.webp",
+        "category": "AirFiber",
+        "description": "Tecnología inalámbrica revolucionaria. Presentamos airFiber, una radio punto a punto de 24 GHz verdaderamente revolucionaria de Ubiquiti. AirFiber, alojado en un factor de forma compacto y altamente eficiente, ofrece un rendimiento revolucionario de más de 1,4 Gbps, un rendimiento agregado y un alcance de más de 13 km. airFiber marca el comienzo de una nueva era en tecnología de backhaul de clase portadora que revoluciona los precios."
     }
 ]
