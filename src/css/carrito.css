@@ -1,0 +1,33 @@
+  /* totalde unidades sobre el carrito*/
+ /*  .cart {
+    position: relative;
+  }
+ */
+  #cart_menu_num {
+    position: relative;
+    top: 0;
+    left: 55%;
+    background: red;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2px;
+  }
+
+  /* Total de la compra en la navbar*/
+  #muestro_monto {
+    position: relative;
+    top: 0;
+    left: -5%;
+    width: 5%;
+    height: 4px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: white;
+    padding: 3px;
+  }

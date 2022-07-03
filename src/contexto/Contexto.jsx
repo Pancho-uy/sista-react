@@ -11,6 +11,23 @@ export const CartProvider = ({ children }) => {
         console.log(cart);
     }, [cart]);
 
+    // Calculo total de unidades de TODOS los articulos agregados al carrito
+
+    function totalUnidades() {
+        let total = 0;
+        cart.forEach((item) => (total = total + item.cantidad));
+        console.log(total);
+        return total;
+    }
+
+    //Calculo monto total de artículos en el carrito
+
+    function totalCompra() {
+        let montoTotal = 0;
+        cart.forEach((item) => (montoTotal = montoTotal + (item.cantidad*item.price)));
+        let ret="USD"+montoTotal.toFixed(2);
+        return ret;
+    }
     // Agrego las cantidades de los items comprados al carrito
 
     const addToCart = (item, cantidad) => {
@@ -37,27 +54,16 @@ export const CartProvider = ({ children }) => {
         return cart.some((prod) => prod.ID === id); // Si lo encuentro retono TRUE
     };
 
-    const borroItem = (item) => {
-
-        if (isInCart(item.ID)) {
-            let indice = cart.findIndex(elitem=>elitem.ID!==item.ID); // Localizo el item en el carrito
-            let articulo = cart[indice];
-            let nombre = cart[indice].name  // A los efecto del console.log
-            const CarritoTemp= [...cart];  // Creo array de trabajo
-            CarritoTemp.filter(indice,1,articulo); // Filtro ("dejo") los items que no quiero borrar y elimino el que coincide con el ID
-            setCart([...CarritoTemp]); //Actualizo el array principal
-            console.log("Item ", nombre," eliminado")} // Muestro por console.log el carrito sin el articulo
-        else
-            alert("ERROR, carrito vacío")
-        }
+    function borroItems(ID) {
+        let carritoFiltrado=cart.filter(item=>item.ID!==ID);
+        setCart(carritoFiltrado);
+    }
 
     const clearCart = () => {
         setCart([]);           //Borro todos los items del carrito
     };
-
-    
     return (
-        <CartContext.Provider value={{ cart, borroItem, addToCart, clearCart }}>
+        <CartContext.Provider value={{ cart, borroItems, addToCart, clearCart, totalUnidades, totalCompra}}>
             {children}
         </CartContext.Provider>
     );
