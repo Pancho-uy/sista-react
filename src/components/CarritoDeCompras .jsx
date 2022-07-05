@@ -3,9 +3,9 @@ import { CartContext } from '../contexto/Contexto';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-/* const divCentrado={
+const divCentrado={
   margin: "0,50%,0,50%"
-} */
+}
 
 const centrado={
   width: "40rem",
@@ -43,7 +43,7 @@ const CarritoDeCompras=() => {
             <div class="col-md-4">
               <div key={item.ID} className='card border-info mb-3' style={anchoCard}>
                   <div  key={item.ID} >
-                    <img src={item.img} alt="" height={'95rem'}></img> 
+                    <img src={item.img} alt="" height={'95rem'}></img>
                     <h5 className='card-title'>{item.name}</h5>
                   </div>
                   <p className="card-text">Precio unitario: USD {item.price}</p>
