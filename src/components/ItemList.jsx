@@ -3,15 +3,14 @@ import ElSaludo from './ElSaludo';
 import Item from './Item';
 
 const ItemList = ({aviso, items }) => {
-    console.log(items);
     return (
         <>
-            <div class="row">
+            <div className="row">
                 <ElSaludo saludo={aviso}/>
             </div>
-            <div class="row">
-                {items.map((item) => (
-                    <Item key={item.id} item={item} />
+            <div className="row">
+                {items.map((items) => (
+                    <Item key={items.id} item={items} />
                 ))}
             </div>
         </>

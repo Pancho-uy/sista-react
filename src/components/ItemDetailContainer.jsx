@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../css/style.css'
-import articulos from '../db/articulosDB.json';
+/* import articulos from '../db/articulosDB.json'; */
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+import  {traerProductos, traerUnProducto} from '../services/firestore';
 
 const margenSup = {
     margin: "7%"
@@ -14,12 +15,12 @@ function ItemDetailContainer({detalle}) {
 
     const {id} = useParams();
     useEffect(() => {
-        const traerArticulo = new Promise((res, rej) => {
+        /* const traerArticulo = new Promise((res, rej) => {
             setTimeout(() => {
                 res(articulos[id]);
-            }, 1600); // Dos segundos de delay
-        });
-        traerArticulo
+            }, 1600); // 1.6 seg delay
+        }) */;
+        traerUnProducto(id)
             .then((res) => {
                 setArticulo(res);
                 setIsLoading(false);
@@ -43,7 +44,7 @@ function ItemDetailContainer({detalle}) {
           </div>
         }
         </>
-    ); 
+    );
 }
 
 export default ItemDetailContainer
