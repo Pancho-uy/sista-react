@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 
-import {getFirestore, getDocs, setDoc, getDoc, doc, collection, query, where } from "firebase/firestore";
+import {getFirestore, getDocs, setDoc, getDoc, doc, collection, query, where, Timestamp,addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA1VCZhfAvImy-k9TXv6s5NoEmu6XNwg98",
@@ -153,3 +153,21 @@ export async function exportDataToFirestore(){
     )  
   })
 }
+
+export async function creoOrdenDeCompra( dataOrder ){
+  /* seguir en 1h.12min de la clase Firebase II */ 
+
+ /*  const orderColectionRef = collection(appFirestore, "orders");
+  const dateTimestamp = Timestamp.now();
+
+  const dataOrderWithDate = {
+    buyer: dataOrder.buyer,
+    items: dataOrder.items,
+    total: dataOrder.total,
+    date: dateTimestamp 
+  };
+  console.log("--->",dataOrderWithDate);
+  const orderCreated = await addDoc(orderColectionRef, dataOrderWithDate);
+  return orderCreated; */
+  console.log("VENIMOS BIEN...");
+} 

@@ -2,6 +2,8 @@
 import { CartContext } from '../contexto/Contexto';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import FormUSR from './formUSR';
+import { creoOrdenDeCompra } from '../services/firestore';
 
 /* const divCentrado={
   margin: "0,50%,0,50%"
@@ -19,9 +21,22 @@ const anchoCard = {
   heigth: "25rem"
 }
 const CarritoDeCompras=() => {
-  const {cart} = useContext(CartContext);
-  const {borroItems} = useContext(CartContext);
-  const {totalCompra} = useContext(CartContext);
+  const {cart, borroItems, totalCompra} = useContext(CartContext);
+
+  function handleBuyOrder()
+  {
+  const dataOrder = {
+    buyer: {  
+      name: "prueba", 
+      phone: "123456789", 
+      email: "pp@pp.com" 
+    },
+    items: cart,
+    total: totalCompra()
+  };
+  console.log(dataOrder.items);
+  creoOrdenDeCompra(dataOrder);
+}
 
   if (cart.length === 0) {
     return (
@@ -61,7 +76,10 @@ const CarritoDeCompras=() => {
       <hr/>
         <div class="mx-auto" style={centrado}>
           <h3> Total de la compra: {totalCompra()}</h3>
-          <button className="btn btn-danger" style={anchoCard}>Terminar Compra </button>
+          <button 
+                className="btn btn-danger" style={anchoCard}
+                onClick={handleBuyOrder}>Terminar Compra 
+          </button>
         </div>
       </div>
     </div>

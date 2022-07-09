@@ -1,14 +1,12 @@
 import { createContext, useState, useEffect } from 'react';
 
-
 export const CartContext = createContext();   // Contexto para envolver toda la APP
-
 export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        console.log(cart);
+        console.log("DEL UsEEFFECT: ", cart);
     }, [cart]);
 
     // Calculo total de unidades de TODOS los articulos agregados al carrito
@@ -48,7 +46,6 @@ export const CartProvider = ({ children }) => {
     };
 
     const isInCart = (id) => {
-   /*      console.log("ID ",id) */
         return cart.some((prod) => prod.id === id); // Si lo encuentro retono TRUE
     };
 
