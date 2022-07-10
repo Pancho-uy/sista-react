@@ -1,7 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 
-import {getFirestore, getDocs, setDoc, getDoc, doc, collection, query, where, Timestamp,addDoc } from "firebase/firestore";
+import {getFirestore, getDocs, getDoc, doc, collection, query, where, Timestamp,addDoc } from "firebase/firestore";
+
+/* setDoc */
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyA1VCZhfAvImy-k9TXv6s5NoEmu6XNwg98",
@@ -67,7 +70,7 @@ export async function traerProductosDeCategoria(catID){
     return respuesta;
 }
 
-export async function exportDataToFirestore(){
+/* export async function exportDataToFirestore(){
   const productos =[
 {
         ID:0,
@@ -142,7 +145,6 @@ export async function exportDataToFirestore(){
         description: "Tecnología inalámbrica revolucionaria. Presentamos airFiber, una radio punto a punto de 24 GHz verdaderamente revolucionaria de Ubiquiti. AirFiber, alojado en un factor de forma compacto y altamente eficiente, ofrece un rendimiento revolucionario de más de 1,4 Gbps, un rendimiento agregado y un alcance de más de 13 km. airFiber marca el comienzo de una nueva era en tecnología de backhaul de clase portadora que revoluciona los precios."
     }
 ];
-
   const itemColletion = collection(appFirestore, "articulos");
   productos.forEach( item => {
     const newDoc = doc(itemColletion,item);      
@@ -152,7 +154,7 @@ export async function exportDataToFirestore(){
     .catch( (error=> console.log("error obteniendo los datos: ", error))        
     )  
   })
-}
+} */
 
  /* seguir en 1h.12min de la clase Firebase II */ 
 

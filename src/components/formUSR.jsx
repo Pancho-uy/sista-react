@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react'
+import {useState} from 'react'
 
 function FormUSR({cart, totalCompra, creoOrdenDeCompra, clearCart}) {
 
@@ -10,12 +10,11 @@ function FormUSR({cart, totalCompra, creoOrdenDeCompra, clearCart}) {
   )
 
   const handleChange = (evt) => {
-    
     const field = evt.target.name;
     const value = evt.target.value;
 
     setBuyer({
-      ...buyer, 
+      ...buyer,
       [field]: value,
     })
   }
@@ -25,29 +24,33 @@ function FormUSR({cart, totalCompra, creoOrdenDeCompra, clearCart}) {
     const dataOrder = {
       buyer,
       items: cart,
-      total: totalPriceCart(),
+      total: totalCompra(),
     };
-
-    creoOrdenDeCompra(dataOrder).then(( orderDataCreated ) => {
+    creoOrdenDeCompra(dataOrder).then(( orderDataCreated ) => {<div>${dataOrder}</div>
+    alert('¡Gracias por su compra!\n\nSu orden de compra ha sido creada con el número: ' + orderDataCreated.id+
+    '\n\nLe enviaremos un email a: '+dataOrder.buyer.email+' a la brevedad para coordinar la entrega.');
       clearCart();
-      console.log(orderDataCreated.id);
-    });
+      console.log("ID de compra del cliente: ",orderDataCreated.id);});
   }
 
   return (
     <form>
-      <label htmlFor="username">Usuario</label>
-      <input onChange={handleChange} name="name"></input>
-
-      <label htmlFor="phone">Telefono</label>
-      <input onChange={handleChange} name="phone"></input>
-
-      <label htmlFor="email">Email</label>
-      <input onChange={handleChange} name="email"></input>
-
-      <button onClick={handleBuyOrder}>Finalizar Compra</button>
+      <div className='mb-4'>
+        <label htmlFor="username" className='form-label'><span>Usuario</span></label>
+        <input className='form-control' onChange={handleChange} name="name"></input>
+      </div>
+      <div className='mb-4'>
+        <label htmlFor="phone" className='form-label'><span>Telefono </span></label>
+        <input className='form-control' onChange={handleChange} name="phone"></input>
+      </div>
+      <div className='mb-4'>
+        <label htmlFor="email" className='form-label'><span>Email</span></label>
+        <input type='email' className='form-control' onChange={handleChange} name="email"></input>
+      </div>
+      <div className='mb-4'>
+        <button className='btn btn-danger' onClick={handleBuyOrder}>Finalizar Compra</button>
+      </div>
     </form>
   )
 }
-
 export default FormUSR

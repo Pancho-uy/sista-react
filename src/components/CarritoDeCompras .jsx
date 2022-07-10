@@ -2,8 +2,9 @@
 import { CartContext } from '../contexto/Contexto';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-/* import FormUSR from './formUSR'; */
 import { creoOrdenDeCompra } from '../services/firestore';
+import FormUSR from './formUSR';
+
 
 /* const divCentrado={
   margin: "0,50%,0,50%"
@@ -22,21 +23,6 @@ const anchoCard = {
 }
 const CarritoDeCompras=() => {
   const {cart, borroItems, totalCompra, clearCart} = useContext(CartContext);
-
-  function handleBuyOrder()
-  {
-  const dataOrder = {
-    buyer: {
-      name: "",
-      phone: "",
-      email: ""
-    },
-    items: cart,
-    total: totalCompra()
-  };
-  creoOrdenDeCompra(dataOrder).then(( orderDataCreated ) => { clearCart();
-    console.log("ID de compra del cliente: ",orderDataCreated.id);});
-}
 
   if (cart.length === 0) {
     return (
@@ -76,7 +62,8 @@ const CarritoDeCompras=() => {
       <hr/>
         <div class="mx-auto" style={centrado}>
           <h3> Total de la compra: {totalCompra()}</h3>
-          <button className="btn btn-danger" onClick={handleBuyOrder}>Finalizar Compra</button>
+          {/* para el form {cart, totalCompra, creoOrdenDeCompra, clearCart}*/}
+          <FormUSR cart={cart} totalCompra={totalCompra} creoOrdenDeCompra={creoOrdenDeCompra} clearCart={clearCart}/>
         </div>
       </div>
     </div>
