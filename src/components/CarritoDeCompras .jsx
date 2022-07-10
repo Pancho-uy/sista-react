@@ -25,12 +25,11 @@ const CarritoDeCompras=() => {
 
   function handleBuyOrder()
   {
-    
   const dataOrder = {
-    buyer: {  
-      name: "", 
-      phone: "", 
-      email: "" 
+    buyer: {
+      name: "",
+      phone: "",
+      email: ""
     },
     items: cart,
     total: totalCompra()

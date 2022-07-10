@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import {useContext, useState} from 'react'
 
-function FormUSR({cart, totalPriceCart, creoOrdenDeCompra, clearCart}) {
+function FormUSR({cart, totalCompra, creoOrdenDeCompra, clearCart}) {
 
   const [buyer, setBuyer] = useState(  {
       name: "",
