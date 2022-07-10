@@ -167,7 +167,7 @@ export async function exportDataToFirestore(){
     date: dateTimestamp 
   };
 
-  console.log("--->",ordenDeCompra);
+  console.log("ORDEN DE COMPRA: ",ordenDeCompra);
   const ordenCreada = await addDoc(orderColectionRef, ordenDeCompra); 
 return ordenCreada; 
 
