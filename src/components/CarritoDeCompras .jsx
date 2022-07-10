@@ -34,7 +34,6 @@ const CarritoDeCompras=() => {
     items: cart,
     total: totalCompra()
   };
-  console.log(dataOrder.items);
   creoOrdenDeCompra(dataOrder);
 }
 

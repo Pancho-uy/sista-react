@@ -154,10 +154,10 @@ export async function exportDataToFirestore(){
   })
 }
 
-export async function creoOrdenDeCompra( dataOrder ){
-  /* seguir en 1h.12min de la clase Firebase II */ 
+ /* seguir en 1h.12min de la clase Firebase II */ 
 
- /*  const orderColectionRef = collection(appFirestore, "orders");
+ export async function creoOrdenDeCompra( dataOrder ){
+  const orderColectionRef = collection(appFirestore, "orders");
   const dateTimestamp = Timestamp.now();
 
   const dataOrderWithDate = {
@@ -166,8 +166,15 @@ export async function creoOrdenDeCompra( dataOrder ){
     total: dataOrder.total,
     date: dateTimestamp 
   };
+
   console.log("--->",dataOrderWithDate);
-  const orderCreated = await addDoc(orderColectionRef, dataOrderWithDate);
-  return orderCreated; */
-  console.log("VENIMOS BIEN...");
-} 
+  const orderCreated = await addDoc(orderColectionRef, dataOrderWithDate); 
+return orderCreated; 
+
+}
+
+/* export async function creoOrdenDeCompra( dataOrder ){
+  const orderColectionRef = collection(appFirestore, "orders");
+  const newDocRef = doc(orderColectionRef);
+  setDoc(newDocRef, dataOrder).then( ()=>console.log("OK))"))
+} */
