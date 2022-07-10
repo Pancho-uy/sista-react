@@ -160,16 +160,16 @@ export async function exportDataToFirestore(){
   const orderColectionRef = collection(appFirestore, "orders");
   const dateTimestamp = Timestamp.now();
 
-  const dataOrderWithDate = {
+  const ordenDeCompra = {
     buyer: dataOrder.buyer,
     items: dataOrder.items,
     total: dataOrder.total,
     date: dateTimestamp 
   };
 
-  console.log("--->",dataOrderWithDate);
-  const orderCreated = await addDoc(orderColectionRef, dataOrderWithDate); 
-return orderCreated; 
+  console.log("--->",ordenDeCompra);
+  const ordenCreada = await addDoc(orderColectionRef, ordenDeCompra); 
+return ordenCreada; 
 
 }
 

@@ -6,7 +6,7 @@ export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        console.log("DEL UsEEFFECT: ", cart);
+        console.log("DEL useEffect: ", cart);
     }, [cart]);
 
     // Calculo total de unidades de TODOS los articulos agregados al carrito
