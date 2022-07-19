@@ -26,7 +26,8 @@ function FormUSR({cart, totalCompra, creoOrdenDeCompra, clearCart}) {
       items: cart,
       total: totalCompra(),
     };
-    dataOrder.buyer.name == null ? alert("Por favor, complete los datos del comprador") :
+    console.log("NOMBRE COMPRADOR: ",dataOrder.buyer.name);
+    dataOrder.buyer.name === "" || dataOrder.buyer.email === "" ? alert("Por favor, Nombre e Email son obligatorios") : creoOrdenDeCompra(dataOrder);
     creoOrdenDeCompra(dataOrder).then(( orderDataCreated ) => {<div>${dataOrder}</div>
     alert('¡Gracias por su compra!\n\nSu orden de compra ha sido creada con el número: ' + orderDataCreated.id+
     '\n\nLe enviaremos un email a: '+dataOrder.buyer.email+' a la brevedad para coordinar la entrega.');
