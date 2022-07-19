@@ -27,25 +27,22 @@ export const CartProvider = ({ children }) => {
     // Agrego las cantidades de los items comprados al carrito
     const addToCart = (item, cantidad) => {
         if (isInCart(item.id)) {
-            console.log("item.id", item.id)
-            let indice = cart.findIndex(elitem=>elitem.id===item.id); 
-            console.log("elitem.ID", indice)
-            let articulo = cart[indice];  
+            let indice = cart.findIndex(elitem=>elitem.id===item.id);
+            let articulo = cart[indice];
             articulo.cantidad=articulo.cantidad+cantidad;
-            const CarritoTemp= [...cart];  
-            CarritoTemp.splice(indice,1,articulo);  
+            const CarritoTemp= [...cart];
+            CarritoTemp.splice(indice,1,articulo);
             setCart([...CarritoTemp]);
 
         } else {
             setCart([...cart, { ...item, cantidad }]);
         }
     };
-
     const isInCart = (id) => {
         return cart.some((prod) => prod.id === id); // Si lo encuentro retono TRUE
     };
 
-    // Remuevo el carrito el item seleccionado 
+    // Remuevo el carrito el item seleccionado
     function borroItems(id) {
         let carritoFiltrado=cart.filter(item=>item.id!==id);
         setCart(carritoFiltrado);
