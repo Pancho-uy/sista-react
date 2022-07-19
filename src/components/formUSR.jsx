@@ -36,7 +36,7 @@ function FormUSR({cart, totalCompra, creoOrdenDeCompra, clearCart}) {
     <form>
       <div className='mb-4'>
         <label htmlFor="username" className='form-label'><span>Usuario</span></label>
-        <input className='form-control' onChange={handleChange} name="name"></input>
+        <input className='form-control' onChange={handleChange} name="name" required></input>
       </div>
       <div className='mb-4'>
         <label htmlFor="phone" className='form-label'><span>Telefono </span></label>
@@ -44,7 +44,7 @@ function FormUSR({cart, totalCompra, creoOrdenDeCompra, clearCart}) {
       </div>
       <div className='mb-4'>
         <label htmlFor="email" className='form-label'><span>Email</span></label>
-        <input type='email' className='form-control' onChange={handleChange} name="email"></input>
+        <input type='email' className='form-control' onChange={handleChange} name="email" required></input>
       </div>
       <div className='mb-4'>
         <button className='btn btn-danger' onClick={handleBuyOrder}>Finalizar Compra</button>
