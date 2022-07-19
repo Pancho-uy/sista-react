@@ -27,7 +27,9 @@ export const CartProvider = ({ children }) => {
     // Agrego las cantidades de los items comprados al carrito
     const addToCart = (item, cantidad) => {
         if (isInCart(item.id)) {
-            let indice = cart.findIndex(elitem=>elitem.ID===item.ID); 
+            console.log("item.id", item.id)
+            let indice = cart.findIndex(elitem=>elitem.id===item.id); 
+            console.log("elitem.ID", indice)
             let articulo = cart[indice];  
             articulo.cantidad=articulo.cantidad+cantidad;
             const CarritoTemp= [...cart];  
