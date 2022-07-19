@@ -1,12 +1,10 @@
 import { NavLink } from "react-router-dom";
 
 const Item = ({ item }) => {
-    console.log("ITEM: ",item);
-    const miURL=`/detalle/${item.id}`; 
-    console.log("MI URL: ",miURL);
+    const miURL=`/detalle/${item.id}`;
     return (
         <div className="col">
-            <div className="card h-100 ">
+            <div className="card border-0 h-100 ">
                 <div className="card-body">
                     <NavLink to={miURL}>
                         <img src={item.img} alt="imagen del articulo"></img>

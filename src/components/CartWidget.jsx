@@ -6,8 +6,7 @@ import "../css/carrito.css";
 
 export default function ElCarrito() {
   const {totalUnidades} = useContext(CartContext);
-  
-  /* const {totalCompra} = useContext(CartContext); */
+
   return (
     <>
       <Link to ="/carrito/" className="nav-link">
@@ -17,7 +16,7 @@ export default function ElCarrito() {
                <span id="cart_menu_num" data-action="cart-can" className="badge rounded-circle">{totalUnidades()}</span>
                </>
                : null
-          }        {/* <span id="muestro_monto" className="monto">{totalCompra()}</span> */}
+          }
       </Link>
     </>
   )

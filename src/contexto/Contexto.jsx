@@ -6,7 +6,6 @@ export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        console.log("useEffect del carrito: ", cart);
     }, [cart]);
 
     // Calculo total de unidades de TODOS los articulos agregados al carrito
@@ -14,7 +13,6 @@ export const CartProvider = ({ children }) => {
     function totalUnidades() {
         let total = 0;
         cart.forEach((item) => (total = total + item.cantidad));
-        console.log(total);
         return total;
     }
 
@@ -27,18 +25,14 @@ export const CartProvider = ({ children }) => {
         return ret;
     }
     // Agrego las cantidades de los items comprados al carrito
-
     const addToCart = (item, cantidad) => {
-        console.log("EL ITEM: ",cart)
         if (isInCart(item.id)) {
             let indice = cart.findIndex(elitem=>elitem.ID===item.ID); 
             let articulo = cart[indice];  
-            articulo.cantidad=articulo.cantidad+cantidad;  
-            let nombre = cart[indice].name  
+            articulo.cantidad=articulo.cantidad+cantidad;
             const CarritoTemp= [...cart];  
             CarritoTemp.splice(indice,1,articulo);  
-            setCart([...CarritoTemp]); 
-            console.log("Item ", nombre," con la cantidad agregada") 
+            setCart([...CarritoTemp]);
 
         } else {
             setCart([...cart, { ...item, cantidad }]);
@@ -53,7 +47,6 @@ export const CartProvider = ({ children }) => {
     function borroItems(id) {
         let carritoFiltrado=cart.filter(item=>item.id!==id);
         setCart(carritoFiltrado);
-
     }
 
     const clearCart = () => {

@@ -6,7 +6,7 @@ import {BrowserRouter,Route, Routes} from "react-router-dom"
 import CarritoDeCompras from './components/CarritoDeCompras '
 import { CartProvider } from "./contexto/Contexto";
 
-
+//App principal
 export default function App() {
   return (
   <CartProvider>

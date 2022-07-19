@@ -5,11 +5,9 @@ import { Link } from 'react-router-dom';
 import { creoOrdenDeCompra } from '../services/firestore';
 import FormUSR from './formUSR';
 
-
-/* const divCentrado={
-  margin: "0,50%,0,50%"
-} */
-
+const divCentrado={
+  textAlign: 'center',
+}
 const centrado={
   width: "40rem",
 }
@@ -28,7 +26,9 @@ const CarritoDeCompras=() => {
     return (
     <>
       <h2 style={margenSup} className="seccionAnima">No hay items en el carrito, ve al inicio para comprar.</h2>
-      <Link to ="/"><button className="btn btn-danger divCentrado">Ir al Inicio </button></Link>
+      <div  style={divCentrado}>
+        <Link to ="/"><button className="btn btn-danger">Ir al Inicio </button></Link>
+      </div>
     </>
     )}
   return (
@@ -42,7 +42,7 @@ const CarritoDeCompras=() => {
           cart.map((item) =>
           (
             <div class="col-md-4">
-              <div key={item.ID} className='card border-info mb-3' style={anchoCard}>
+              <div key={item.ID} className='card border-0 mb-3' style={anchoCard}>
                   <div  key={item.ID} >
                     <img src={item.img} alt="" height={'95rem'}></img> 
                     <h5 className='card-title'>{item.name}</h5>
@@ -62,7 +62,6 @@ const CarritoDeCompras=() => {
       <hr/>
         <div class="mx-auto" style={centrado}>
           <h3> Total de la compra: {totalCompra()}</h3>
-          {/* para el form {cart, totalCompra, creoOrdenDeCompra, clearCart}*/}
           <FormUSR cart={cart} totalCompra={totalCompra} creoOrdenDeCompra={creoOrdenDeCompra} clearCart={clearCart}/>
         </div>
       </div>

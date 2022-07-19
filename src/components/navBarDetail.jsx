@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const margenSup = {
   margin: "7%"
 }
-/* ver video 1:56:47 */
 export default function NavBar() {
   return (
     <>

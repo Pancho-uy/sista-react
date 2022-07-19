@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-/* import productos from '../db/articulosDB.json'; */
 import ItemList from './ItemList';
 import Saludo from './ElSaludo';
 import { useParams } from 'react-router-dom';
@@ -12,7 +11,6 @@ const margenSup = {
 const ItemListContainer = ({detalle}) => {
     const [products, setProducts] = useState([]);
     const {catID}= useParams();
-    console.log("CATEGORIA DESDE USEPARAMS ",catID);
     let mensaje="";
     useEffect(() => {
         if (catID){
@@ -20,7 +18,7 @@ const ItemListContainer = ({detalle}) => {
                     traerProductosDeCategoria(catID).then((res) => {
                         setProducts(res);})
                         .catch((error) => {
-                        console.log(error);
+                        alert(error);
                 });
         }
         else {
@@ -29,7 +27,7 @@ const ItemListContainer = ({detalle}) => {
                             setProducts(res);
                         })
                         .catch((error) => {
-                            console.log(error);
+                            alert(error);
                         });
         }
     }, [catID]);
@@ -46,17 +44,3 @@ const ItemListContainer = ({detalle}) => {
     );
 };
 export default ItemListContainer;
-
-      /*   const traerProductos = new Promise((res, rej) => {
-            setTimeout(() => {
-                if (catID === undefined)
-                    res(productos);
-                else{
-                    const filtrados = productos.filter(categoria =>{
-                        return categoria.category===catID;
-                    })
-                    res(filtrados);
-                }
-            }, 500); // delay
-        });
-       */  
