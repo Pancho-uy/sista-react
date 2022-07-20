@@ -16,7 +16,10 @@ Instalar React-router-dom
   Para la navegacion dentro del sitio necesitaremos React-Router-DOM
     npm install reactrouter-dom
 
-Los datos estan almacenados en Firestore, las imagenes del catalogo estan hosteadas en Cloudinary
+Los datos estan almacenados en Firestore
+  npm install --save firebase
+
+Las imagenes del catalogo estan hosteadas en Cloudinary
 
 El sitio se encuentra publicado en Netlify en la URL: https://brilliant-syrniki-3d3dd1.netlify.app/
 
