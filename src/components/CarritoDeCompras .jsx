@@ -59,6 +59,11 @@ const CarritoDeCompras=() => {
        </div>
       </div>
       <div className="row">
+        <div style={divCentrado}>
+          <button className='btn btn-danger' onClick={() => clearCart()} ><strong><h5>Vaciar carrito</h5></strong></button>
+        </div>
+      </div>
+      <div className="row">
       <hr/>
         <div class="mx-auto" style={centrado}>
           <h3> Total de la compra: {totalCompra()}</h3>
