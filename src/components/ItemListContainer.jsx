@@ -22,7 +22,7 @@ const ItemListContainer = ({detalle}) => {
                 });
         }
         else {
-                    traerProductos() // traerProductos() de firestore
+                    traerProductos() // de firestore
                         .then((res) => {
                             setProducts(res);
                         })
