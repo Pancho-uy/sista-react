@@ -20,7 +20,7 @@ El proyecto consta e los siguientes componentes:
 
 NavBar.jsx - Crea la barra de menú principal del sitio. Usa el componente MenuItem.jsx
 Carrito.jsx - Es el cartwidget
-ElSaludo.jsx - Despliega un texto con formato <h1> donde se necesite usar como titulo de la sección, mensaje, etc
+ElSaludo.jsx - Despliega un texto donde se necesite usar como titulo de la sección, mensaje, etc
 ItemListContainer.jsx - Trae los artículos de la BD y los filtra segun la categoría seleccionada o en caso de 
                         no seleccionar ninguna, trae todos los artículos. Usa los componentes ItemList.jsx e Item.jsx
                         Usa también el componente ItemCount.jsx para seleccionar la cantidad a comprar.
