@@ -18,11 +18,13 @@ Instalar React-router-dom
 
 Los datos estan almacenados en Firestore, las imagenes del catalogo estan hosteadas en Cloudinary
 
+El sitio se encuentra publicado en Netlify en la URL: https://brilliant-syrniki-3d3dd1.netlify.app/
+
 El proyecto es una "tienda" online de dispositivos de red. 
 
 Al entrar al sitio se renderiza la navbar (componente navbar.jsx) y el componente itemlistcontainer.jsx muestra el catalogo completo (sin filtrar), en la ruta "/" definida en app.js.
 
-Una vez dentro desde la navbar se puede ver el catalogo filtrado por categoria, para eso se llama al componente itemlistcontainer.jsx que dentro de un useEffect trae los productos segun la categoria pasada en el useParams() y las muestra usando el componente itemlist.jsx.
+Una vez dentro, desde la navbar se puede ver el catalogo filtrado por categoria, para eso se llama al componente itemlistcontainer.jsx que dentro de un useEffect trae los productos segun la categoria pasada en el useParams() y las muestra usando el componente itemlist.jsx.
 
 Si se clickea en la imagen de cada artículo el componente itemdetail.jsx despliega una card con el item del catalogo seleccionado y permite mediante el componente itemcount.jsx elegir la cantidad a comprar, enviarla al carrito e ir al mismo para finalizar la compra, quitar el item del carrito o seguir comprando, lo que nos vuelve al inicio.
 
